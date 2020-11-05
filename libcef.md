@@ -250,6 +250,14 @@ switch (message)   {
 
 ### 4.2另外一个例子  MFC 
 
+https://blog.csdn.net/blackwoodcliff/article/details/74276848
+
+十分详细
+
+
+
+
+
 https://blog.csdn.net/gaga392464782/article/details/49490101
 
 CefMFCApp::InitInstance()
@@ -324,15 +332,23 @@ CefRefPtr<CefFrame> **frame** = browser->GetMainFrame();
 
 frame->ExecuteJavaScript("alert('ExecuteJavaScript works!');",  frame->GetURL(), 0);
 
+在本人的依赖中有 GetCefInstance()->RunJS(pTestWeb->GetWebID(), L"sendMessage", 1, JsDataStr.GetBuffer());
+
+ 第一个参数为该网页的ID号，第二个为js的函数名，第三个为总的参数个数，第四个为参数，详情请看源代码。
 
 
- 
 
 https://blog.csdn.net/mfcing/article/details/44539035?utm_source=blogxgwz6 
 
 
 
 ### JS调用C++函数
+
+![1604464620749](libcef/1604464620749.png)
+
+
+
+
 
 重写 CefRenderProcessHandler的OnContextCreated接口 
 
